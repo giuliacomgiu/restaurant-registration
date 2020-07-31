@@ -1,19 +1,19 @@
-#include "node.cpp"
+#include "MainWindow.h"
+#include "secondwindow.h"
+#include <QApplication>
 
-using namespace std;
+/*
+*  1 - Add Credits to Card
+*  2 - Add Credits to Mobile
+*  3 - Went to RU?
+*/
+char updateType;
 
-
-
-int main()
+int main(int argc, char *argv[])
 {
-	List lista(30, "primeiro");
-	lista.auxInserir(lista.root, 20, "segundo");
-	lista.auxInserir(lista.root, 10, "terceiro");
-//	lista.auxInserir(lista.root, 70, "quarto");
-//	lista.auxInserir(lista.root, 60, "quinto");
-//	lista.auxInserir(lista.root, 80, "sexto");
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
 
-	//lista.listAll(lista.root);
-	while(1){}
-
+    return a.exec();
 }
